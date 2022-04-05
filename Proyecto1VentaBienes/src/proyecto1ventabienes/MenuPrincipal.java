@@ -17,6 +17,25 @@ public class MenuPrincipal extends javax.swing.JFrame {
    
     public MenuPrincipal() {
         initComponents();
+        jPanel5.setVisible(true);
+            jPanel4.setVisible(true);
+            jPanel6.setVisible(true);
+            jPanel9.setVisible(true);
+            jPanel10.setVisible(true);
+            jPanel11.setVisible(true);
+            jTable1.setVisible(false);
+            newButton.setVisible(false);
+            saveButton.setVisible(false);
+            qtyField.setVisible(false);
+            nameField1.setVisible(false);
+            priceField.setVisible(false);
+            numberField.setVisible(false);
+            nameLabel1.setVisible(false);
+            ItemNumberLabel1.setVisible(false);
+            qtyLabel1.setVisible(false);
+            priceLabel1.setVisible(false);
+            jTextField1.setVisible(false);
+            jTextPane1.setVisible(false);
     }
     public ListaPropiedades theList = new ListaPropiedades();
     public ListaPropiedades soldList = new ListaPropiedades();
@@ -490,11 +509,12 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         int itNum;
         try {
-            String input = JOptionPane.showInputDialog("Ingrese el numero de articulo a borrar");
-            itNum = Integer.parseInt(input);
+            
             if (theList.isEmpty()) {
                 JOptionPane.showMessageDialog(this, "La base de datos esta vacia!");
             } else {
+                String input = JOptionPane.showInputDialog("Ingrese el numero de articulo a borrar");
+                itNum = Integer.parseInt(input);
                 int it = theList.find(itNum).numero;
                 if (it == itNum) {
                     theList.delete(it);
@@ -537,11 +557,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // Inventario
-        jTable1.setVisible(true);
+        
 
         if (theList.isEmpty()) {
             JOptionPane.showMessageDialog(this, "No hay propiedades en la base de datos");
+            jTable1.setVisible(true);
         } else {
+            jTable1.setVisible(true);
             jPanel5.setVisible(false);
             jPanel4.setVisible(false);
             jPanel6.setVisible(false);
