@@ -18,11 +18,12 @@ public class MenuPrincipal extends javax.swing.JFrame {
     public MenuPrincipal() {
         initComponents();
         jPanel5.setVisible(true);
-            jPanel4.setVisible(true);
-            jPanel6.setVisible(true);
-            jPanel9.setVisible(true);
-            jPanel10.setVisible(true);
-            jPanel11.setVisible(true);
+        jButton9.setVisible(false);
+            jPanel4.setVisible(false);
+            jPanel6.setVisible(false);
+            jPanel9.setVisible(false);
+            jPanel10.setVisible(false);
+            jPanel11.setVisible(false);
             jTable1.setVisible(false);
             newButton.setVisible(false);
             saveButton.setVisible(false);
@@ -36,11 +37,29 @@ public class MenuPrincipal extends javax.swing.JFrame {
             priceLabel1.setVisible(false);
             jTextField1.setVisible(false);
             jTextPane1.setVisible(false);
+            jLabel7.setVisible(false);
+jLabel11.setVisible(false);
+
+          
+jPanel3.setVisible(true);
+
+jTextPane2.setVisible(true);
+jButton8.setVisible(true);
+
+jButton3.setVisible(false);
+jLabel10.setVisible(false);
+jPanel5.setVisible(false);
+jButton7.setVisible(false);
+jTable1.setVisible(false);
+jLabel3.setVisible(false);
+jTextPane1.setVisible(false);
+
+            
     }
     public ListaPropiedades theList = new ListaPropiedades();
     public ListaPropiedades soldList = new ListaPropiedades();
     public double totalSale = 0;
-    
+    public String usuario = "" ;
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -86,6 +105,18 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
+        jPanel3 = new javax.swing.JPanel();
+        jButton8 = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextPane2 = new javax.swing.JTextPane();
+        jPasswordField1 = new javax.swing.JPasswordField();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jButton9 = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -387,7 +418,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 110, 380, 160));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 110, 380, 160));
         jPanel1.add(priceLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         nameLabel1.setText("Nombre:");
@@ -481,24 +512,103 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 jTextField1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 540, 110, 40));
+        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 500, 110, 40));
 
         jScrollPane2.setViewportView(jTextPane1);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 550, 180, -1));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 510, 180, -1));
+
+        jButton8.setText("Iniciar Sesion");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+
+        jScrollPane3.setViewportView(jTextPane2);
+
+        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPasswordField1ActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setText("Contraseña");
+
+        jLabel5.setText("Usuario");
+
+        jLabel6.setText("Sistema de Alquileres Grupo #1");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap(198, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 91, Short.MAX_VALUE)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(39, 39, 39)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGap(32, 32, 32)
+                                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jPasswordField1))
+                        .addGap(262, 262, 262))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(204, 204, 204))))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel6)
+                .addGap(39, 39, 39)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5))
+                .addGap(21, 21, 21)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jPasswordField1)
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton8)
+                .addGap(12, 12, 12))
+        );
+
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 460, 770, 190));
+
+        jButton9.setText("Cerrar Sesion ");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 770, -1, -1));
+
+        jLabel7.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        jLabel7.setText("Bienvenido");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 730, 90, 20));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 700, 90, -1));
+
+        jLabel11.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 730, 140, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 22, Short.MAX_VALUE))
         );
 
         pack();
@@ -552,7 +662,38 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+   
+        int itNum, qty;
+        double total = 0;
+       
+        try {
+            String input = JOptionPane.showInputDialog("Ingrese el numero de articulo");
+            itNum = Integer.parseInt(input);
+            String input1 = JOptionPane.showInputDialog("Ingrese Cantidad");
+            qty = Integer.parseInt(input1);
+
+            if (theList.isEmpty()) {
+                JOptionPane.showMessageDialog(null, "La base de datos esta vacia");
+                return;
+            }
+
+            if (qty > theList.find(itNum).cantidad) {
+                JOptionPane.showMessageDialog(null, "Ya no nos quedan propiedades de ese tipo");
+                return;
+            } else if (itNum != theList.find(itNum).numero) {
+                JOptionPane.showMessageDialog(this, "Ya no nos quedan propiedades de ese tipo");
+                return;
+            } else {
+                theList.find(itNum).cantidad -= qty;
+                total += theList.find(itNum).precio * qty;
+                totalSale += total;
+                
+            }
+       
+            
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(this, "Esa propiedad no existe");
+        }
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -616,10 +757,10 @@ public void reset() {
             }
 
             if (qty > theList.find(itNum).cantidad) {
-                JOptionPane.showMessageDialog(null, "Sorry! Item is out of Stock");
+                JOptionPane.showMessageDialog(null, "Ya no nos quedan propiedades de ese tipo");
                 return;
             } else if (itNum != theList.find(itNum).numero) {
-                JOptionPane.showMessageDialog(this, "Sorry! Item is not in the List.");
+                JOptionPane.showMessageDialog(this, "Ya no nos quedan propiedades de ese tipo");
                 return;
             } else {
                 theList.find(itNum).cantidad -= qty;
@@ -711,6 +852,7 @@ public void reset() {
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
             jPanel5.setVisible(true);
+            
             jPanel4.setVisible(true);
             jPanel6.setVisible(true);
             jPanel9.setVisible(true);
@@ -734,6 +876,100 @@ public void reset() {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+     jPanel5.setVisible(true);
+     usuario = jTextPane2.getText();
+     
+            jPanel4.setVisible(true);
+            jButton9.setVisible(true);
+            jPanel6.setVisible(true);
+            jPanel9.setVisible(true);
+            jPanel10.setVisible(true);
+            jPanel11.setVisible(true);
+            jTable1.setVisible(false);
+            newButton.setVisible(false);
+            saveButton.setVisible(false);
+            qtyField.setVisible(false);
+            nameField1.setVisible(false);
+            priceField.setVisible(false);
+            numberField.setVisible(false);
+            nameLabel1.setVisible(false);
+            ItemNumberLabel1.setVisible(false);
+            qtyLabel1.setVisible(false);
+            priceLabel1.setVisible(false);
+            jTextField1.setVisible(false);
+            jTextPane1.setVisible(false);
+            jPanel3.setVisible(false);
+            jLabel10.setVisible(true);
+            jLabel7.setVisible(true);
+jLabel11.setVisible(true);
+
+jButton3.setVisible(true);
+jButton7.setVisible(true);
+jLabel3.setVisible(true);
+jLabel6.setVisible(false);
+jTextPane2.setVisible(false);
+jLabel5.setVisible(false);
+jLabel4.setVisible(false);
+jPasswordField1.setVisible(false);
+jButton8.setVisible(false);
+
+String X=String.valueOf(usuario); 
+        jLabel11.setText(X);
+
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPasswordField1ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+         jPanel5.setVisible(true);
+         jLabel7.setVisible(false);
+jLabel11.setVisible(false);
+
+            jPanel4.setVisible(false);
+            jPanel6.setVisible(false);
+            jPanel9.setVisible(false);
+            jPanel10.setVisible(false);
+            jPasswordField1.setVisible(true);
+            jPanel11.setVisible(false);
+            jTable1.setVisible(false);
+            newButton.setVisible(false);
+            jButton9.setVisible(false);
+            saveButton.setVisible(false);
+            qtyField.setVisible(false);
+            nameField1.setVisible(false);
+            priceField.setVisible(false);
+            numberField.setVisible(false);
+            nameLabel1.setVisible(false);
+            ItemNumberLabel1.setVisible(false);
+            qtyLabel1.setVisible(false);
+            priceLabel1.setVisible(false);
+            jTextField1.setVisible(false);
+            jTextPane1.setVisible(false);
+          
+jPanel3.setVisible(true);
+
+jTextPane2.setVisible(true);
+jButton8.setVisible(true);
+
+jButton3.setVisible(false);
+jLabel10.setVisible(false);
+jPanel5.setVisible(false);
+jButton7.setVisible(false);
+jTable1.setVisible(false);
+jLabel3.setVisible(false);
+jTextPane1.setVisible(false);
+jLabel6.setVisible(true);
+jLabel5.setVisible(true);
+jLabel4.setVisible(true);
+jButton9.setVisible(false);
+jTextPane2.setText("");
+jPasswordField1.setText("");
+
+    }//GEN-LAST:event_jButton9ActionPerformed
 
     
     
@@ -782,28 +1018,40 @@ public void reset() {
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel9;
+    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextPane jTextPane1;
+    private javax.swing.JTextPane jTextPane2;
     public javax.swing.JTextField nameField1;
     private javax.swing.JLabel nameLabel1;
     public javax.swing.JButton newButton;
